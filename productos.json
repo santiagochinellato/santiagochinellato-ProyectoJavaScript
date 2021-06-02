@@ -1,0 +1,172 @@
+[
+  {
+    "id": "1",
+   "nombre": "Acer Swift 7",
+   "imagen": "https://i.ibb.co/Bfv1P7G/acer-1.png",
+    "descripcion": "procesador Intel® Pentium® Silver",
+    "precio": 73000,
+   " categoria": "Acer"
+  },
+  {
+    "id": "2",
+    "nombre": "Acer Aspire 5 A515",
+   "imagen": "https://i.ibb.co/rbLSJ0f/acer-2.png",
+    "descripcion": "Lleve su creativad a todos lados, dondequiera que vaya.",
+    "precio": 131000,
+   " categoria": "Acer"
+  },
+  {
+    "id": "3",
+    "nombre": "Acer Nitro 5 AN515-54",
+   "imagen": "https://i.ibb.co/JpJJ325/acer-3.png",
+    "descripcion": "procesador Intel® Core™ 11",
+    "precio": 178999,
+   " categoria": "Acer"
+  },
+  {
+    "id": "4",
+    "nombre": "Asus ZenBook E410MA",
+   "imagen": "https://i.ibb.co/Rc7jpGN/asus-1.png",
+    "descripcion": "perfecta combinación de rendimiento y diseño",
+    "precio": 169999,
+   " categoria": "Asus"
+  },
+  {
+    "id": "5",
+    "nombre": "Asus VivoBook E410",
+   "imagen": "https://i.ibb.co/QJdBJD5/asus-2.png",
+    "descripcion": "diseño metálico, compacto, fino (13,9mm) y ultraligero",
+    "precio": 49000,
+   " categoria": "Asus"
+  },
+  {
+    "id": "6",
+    "nombre": "Asus VivoBook X512ja",
+   "imagen": "https://i.ibb.co/NnJwm7C/asus-3.png",
+    "descripcion":
+      "Ya sea en el trabajo o en el juego, ASUS VivoBook 15 es la computadora portátil",
+    "precio": 150000,
+   " categoria": "Asus"
+  },
+  {
+    "id": "7",
+    "nombre": "DELL Vostro ",
+   "imagen": "https://i.ibb.co/Dzm987v/dell-1.png",
+    "descripcion":
+      "La Vostro 3400 combina procesadores Intel® CoreTM de última generación",
+    "precio": 179000,
+   " categoria": "Dell"
+  },
+  {
+    "id": "8",
+    "nombre": "DELL Latitude 5510",
+   "imagen": "https://i.ibb.co/7p26PGH/dell-2.png",
+    "descripcion": "Dell Latitude 5500 es ideal para empresas en crecimiento.",
+    "precio": 175000,
+   " categoria": "Dell"
+  },
+  {
+    "id": "9",
+    "nombre": "Dell Inspiron 3505",
+   "imagen": "https://i.ibb.co/DrRtkG1/dell-3.png",
+    "descripcion": "Pantalla con gran impacto visual",
+    "precio": 135000,
+   " categoria": "Dell"
+  },
+  {
+    "id": "10",
+    "nombre": "Hp 14-ck2096la",
+   "imagen": "https://i.ibb.co/LCtnpb4/hp-2.png",
+    "descripcion": "Diseño atractivo y ligero",
+    "precio": 62999,
+   " categoria": "HP"
+  },
+  {
+    "id": "11",
+    "nombre": "Lenovo Ieapad Flex 5",
+   "imagen": "https://i.ibb.co/nzHX7My/lenovo-1.png",
+    "descripcion": "Procesador Intel Core i3-1005G1",
+    "precio": 93999,
+   " categoria": "Lenovo"
+  },
+  {
+    "id": "12",
+    "nombre": "Lenovo Yoga Slim 7 ",
+   "imagen": "https://i.ibb.co/8mSsJnh/lenovo-2.png",
+    "descripcion": "Intel Core i5-1035G4",
+    "precio": 129999,
+   " categoria": "Lenovo"
+  },
+  {
+    "id": "13",
+    "nombre": "Lenovo Legion 5",
+   "imagen": "https://i.ibb.co/8BTjJtY/lenovo-3.png",
+    "descripcion": "Procesador Intel Core i5-10300H",
+    "precio": 209999,
+   " categoria": "Lenovo"
+  },
+  {
+    "id": "14",
+    "nombre": "Macbook Air 13 Retina",
+   "imagen": "https://i.ibb.co/s581Sx7/mac-1.png",
+    "descripcion": " MacBook Air pesa sólo 1.29 kg",
+    "precio": 159999,
+   " categoria": "Mac"
+  },
+  {
+    "id": "15",
+    "nombre": "Macbook Pro 2020",
+   "imagen": "https://i.ibb.co/Bj27H5X/mac-2.png",
+    "descripcion": "Batería hasta 20 horas de duración",
+    "precio": 243990,
+   " categoria": "Mac"
+  },
+  {
+    "id": "16",
+    "nombre": "Macbook Air 13.3 2020",
+   "imagen": "https://i.ibb.co/drkx5tv/mac-3.png",
+    "descripcion": "Viene con una brillante pantalla Retina",
+    "precio": 204999,
+   " categoria": "Mac"
+  },
+  {
+    "id": "17",
+    "nombre": "Samsung 7",
+   "imagen": "https://i.ibb.co/CQ7Hbt7/samsung-1.png",
+    "descripcion": "16Gb Ram 512Gb Ssd",
+    "precio": 217499,
+   " categoria": "Samsung"
+  },
+  {
+    "id": "18",
+    "nombre": "Samsung 9 Pro 2-in-1",
+   "imagen": "https://i.ibb.co/zxdHfNw/samsung-2.png",
+    "descripcion": "Intel I7-8550U 16Gb Ram 256Gb Ssd",
+    "precio": 217499,
+   " categoria": "Samsung"
+  },
+  {
+    "id": "19",
+    "nombre": "Samsung Galaxy Book",
+   "imagen": "https://i.ibb.co/xqSgQ4Z/samsung-3.png",
+    "descripcion": "Intel Core I5 Procesador 8Gb Memory 256Gb Ssd",
+    "precio": 145499,
+   " categoria": "Samsung"
+  },
+  {
+    "id": "20",
+    "nombre": "Xiaomi Mi NoteBook 14",
+   "imagen": "https://i.ibb.co/yfg1PpK/Xiaomi-Mi-Note-Book-Pro-15-2020-1.png",
+    "descripcion": "Intel Core i7-10510U 10th gen",
+    "precio": 195000,
+   " categoria": "Xiaomi"
+  },
+  {
+    "id": "20",
+    "nombre": "Xiaomi RedmiBook Pro 15",
+   "imagen": "https://i.ibb.co/h88r7rM/xiaomi-1.png",
+    "descripcion": "Intel Core i7-11370H",
+    "precio": 225000,
+   " categoria": "Xiaomi"
+  }
+]

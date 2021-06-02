@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="light-theme.css" rel="stylesheet" class="theme">
+</head>
+
+<body>
+  <header class="container-fluid header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img class="logo-navbar" src="./images/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+        <ul class="navbar-nav ">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html"><img class="icono-computadora" width="50px"
+                src="./images/icono-notebook.png" alt=""></a>
+          </li>
+          <li class="submenu">
+            <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span class="badge bg-danger contador-productos" id="indicador"></span>
+              <img src="images/carrito-de-compras-menu.png" id="img-carrito" class="img-carrito">
+
+            </a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-3 buscador" type="search" placeholder="Buscar productos" aria-label="Search"
+            id="formulario">
+          <button class="btn my-2 my-sm-0" type="submit" id="boton">Buscar</button>
+        </form>
+
+        <div class="dark-mode">
+          <h6 class="titulo-dark-mode">Dark mode</h6>
+          <label class="switch">
+            <input type="checkbox" class="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="container  secciones-categorias-cards">
+    <!-- cards -->
+    <div class="row seccion-cards">
+      <!-- <div class="row" id="producto"></div> -->
+      <div class="row" id="resultado"></div>
+    </div>
+
+  </section>
+  <section>
+    <!-- modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title titulo-productos-seleccionados" id="staticBackdropLabel">Productos Seleccionados</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="recarga">
+            <div class="listado-productos-seleccionados" id="productosCarritoMenu">
+            </div>
+            <div class=" modal-footer ">
+              <a class=" btn btn-primary boton-ir-finalizar" href="./index.html" role="button"
+                onclick="location.reload()">Seguir Comprando</a>
+              <a class=" btn btn-primary boton-seguir-comprando" href="./carrito.html" role="button">Finalizar
+                Compra</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
+  <script src="./cart.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBsiaopU0BuZADZs3-OsTJbyqfW84leKPs",
+      authDomain: "ecommerce-40a85.firebaseapp.com",
+      projectId: "ecommerce-40a85",
+      storageBucket: "ecommerce-40a85.appspot.com",
+      messagingSenderId: "427079706187",
+      appId: "1:427079706187:web:4816e7c5b164c0974b4fce"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+</body>
+
+</html>
