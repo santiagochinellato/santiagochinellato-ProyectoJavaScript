@@ -38,7 +38,11 @@ document.getElementById("productosCarritoMenu").innerHTML = CartCarritoMenu;
 
 // ------------carrito con ajax--------------
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "productos.json", true);
+xhr.open(
+  "GET",
+  "https://ecommerce-40a85-default-rtdb.firebaseio.com/productos.json",
+  true
+);
 xhr.onload = function () {
   if (this.status === 200) {
     let productos = JSON.parse(this.responseText);
