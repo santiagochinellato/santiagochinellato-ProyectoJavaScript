@@ -3,12 +3,12 @@ const sumarPrecioTotal = devuelveValorCarrito;
 let storageProductos = JSON.parse(localStorage.getItem("productos"));
 
 let Carrito = [];
-Carrito = devuelveValorCarrito;
+// Carrito = devuelveValorCarrito;
 function addToCart(id) {
-  let producto = storageProductos.find(
-    (producto) => producto.id === id.toString()
+  let productos = storageProductos.find(
+    (producto) => producto.id === id
   );
-  Carrito.push(producto);
+  Carrito.push(productos);
   localStorage.setItem("carrito", JSON.stringify(Carrito));
 }
 
@@ -20,7 +20,7 @@ let productosTraidoDelStorage = devuelveValorCarrito;
 
 const eliminarItemById = (id) => {
   const itemToDelete = productosTraidoDelStorage.filter((item) => {
-    return item.id !== id.toString();
+    return item.id !== id
   });
   localStorage.setItem("carrito", JSON.stringify(itemToDelete));
   location.reload();
@@ -29,10 +29,10 @@ const eliminarItemById = (id) => {
 
 // -----------carrito con json----------
 
-const agregarAlCarrito = devuelveValorCarrito;
+// const agregarAlCarrito = devuelveValorCarrito;
 // console.log(agregarAlCarrito);
 let cardCarrito = " ";
-agregarAlCarrito.forEach((cart) => {
+devuelveValorCarrito.forEach((cart) => {
   return (cardCarrito += `<div class=" container productoAgregadoCard col-md-12">
         <div class="fotoCard">
           <img src=${cart.imagen} alt="" class="fotoProducto">
