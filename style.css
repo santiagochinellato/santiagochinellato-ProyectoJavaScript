@@ -206,13 +206,11 @@ icono-computadora {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 950px;
 }
 .dark-mode-2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1100px;
 }
 .titulo-dark-mode {
   font-size: 15px;
