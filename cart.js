@@ -1,17 +1,15 @@
 let devuelveValorCarrito = JSON.parse(localStorage.getItem("carrito"));
 const sumarPrecioTotal = devuelveValorCarrito;
 let storageProductos = JSON.parse(localStorage.getItem("productos"));
+console.log(storageProductos);
 
 let Carrito = [];
-// Carrito = devuelveValorCarrito;
 function addToCart(id) {
-  let productos = storageProductos.find(
-    (producto) => producto.id === id
-  );
-  Carrito.push(productos);
+  let producto = storageProductos.find((producto) => producto.id === id);
+  Carrito.push(producto);
   localStorage.setItem("carrito", JSON.stringify(Carrito));
+  console.log(producto);
 }
-
 // ----------fin agregar al carrito----------
 
 // ----------borrar prouductos-----------
@@ -20,7 +18,7 @@ let productosTraidoDelStorage = devuelveValorCarrito;
 
 const eliminarItemById = (id) => {
   const itemToDelete = productosTraidoDelStorage.filter((item) => {
-    return item.id !== id
+    return item.id !== id;
   });
   localStorage.setItem("carrito", JSON.stringify(itemToDelete));
   location.reload();
