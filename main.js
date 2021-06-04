@@ -19,6 +19,58 @@ $(".checkbox").click(function () {
   }
 });
 // -------------------fin modo oscuro-----------
+
+
+// ------------carrito con ajax--------------
+let prodcutosArray = [];
+fetch("https://ecommerce-40a85-default-rtdb.firebaseio.com/productos.json")
+  .then((res) => res.json())
+  .then((productos) => {
+    return localStorage.setItem("productos", JSON.stringify(productos));
+  });
+
+// ---------buscador---------
+const formulario = document.querySelector("#formulario");
+const boton = document.querySelector("#boton");
+let resultado = document.querySelector("#resultado");
+const filtrar = () => {
+  const productos = JSON.parse(localStorage.getItem("productos"))
+  resultado.innerHTML = " ";
+  if (resultado.innetHTML === "") {
+  } else {
+    const texto = formulario.value.toLowerCase();
+    for (let producto of productos) {
+      let categoria = producto.nombre.toLowerCase();
+      if (categoria.indexOf(texto) !== -1) {
+        resultado.innerHTML += `
+  <div class=" row col-3 card">
+    <div class="contenedor-img">
+      <img src=${producto.imagen} alt="" class="img-producto">
+    </div>
+    <h5 class="titulo-producto">${producto.nombre}</h5>
+    <p class="descripcion-producto">${producto.descripcion}</p>
+    <p class="precio-producto"> $${producto.precio}</p>
+    <button class="btn boton-producto" onclick="addToCart(${producto.id})">Agregar<img
+        src="./images/carrito-de-compra.png" alt="" class="icono"></button>
+  </div> `;
+      }
+    }
+  }
+  if (resultado.innerHTML === " ") {
+    resultado.innerHTML += `<h2 class="texto-busqueda">producto no encontrado</h2>`;
+  }
+};
+boton.addEventListener("click", filtrar);
+formulario.addEventListener("keyup", filtrar);
+
+filtrar();
+// --------finbuscador-------
+
+// ------------ fin carrito con ajax------------
+
+let indicator = JSON.parse(localStorage.getItem("carrito"));
+document.getElementById("indicador").innerHTML = indicator.length;
+
 // ---------------carrito menu--------------------
 
 const agregarAlCarritoMenu = JSON.parse(localStorage.getItem("carrito"));
@@ -35,55 +87,3 @@ agregarAlCarritoMenu.forEach((cardMenu) => {
 document.getElementById("productosCarritoMenu").innerHTML = CartCarritoMenu;
 
 // --------------- fin carrito menu--------------------
-
-// ------------carrito con ajax--------------
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "productos.json", true);
-xhr.onload = function () {
-  if (this.status === 200) {
-    let productos = JSON.parse(this.responseText);
-    localStorage.setItem("productos", JSON.stringify(productos));
-    // ---------buscador---------
-    const formulario = document.querySelector("#formulario");
-    const boton = document.querySelector("#boton");
-    let resultado = document.querySelector("#resultado");
-    const filtrar = () => {
-      resultado.innerHTML = " ";
-      if (resultado.innetHTML === "") {
-      } else {
-        const texto = formulario.value.toLowerCase();
-        for (let producto of productos) {
-          let categoria = producto.nombre.toLowerCase();
-          if (categoria.indexOf(texto) !== -1) {
-            resultado.innerHTML += `
-      <div class=" row col-3 card">
-        <div class="contenedor-img">
-          <img src=${producto.imagen} alt="" class="img-producto">
-        </div>
-        <h5 class="titulo-producto">${producto.nombre}</h5>
-        <p class="descripcion-producto">${producto.descripcion}</p>
-        <p class="precio-producto"> $${producto.precio}</p>
-        <button class="btn boton-producto" onclick="location.reload(addToCart(${producto.id}))">Agregar<img
-            src="./images/carrito-de-compra.png" alt="" class="icono"></button>
-      </div> `;
-          }
-        }
-      }
-      if (resultado.innerHTML === " ") {
-        resultado.innerHTML += `<h2 class="texto-busqueda">producto no encontrado</h2>`;
-      }
-    };
-    boton.addEventListener("click", filtrar);
-    formulario.addEventListener("keyup", filtrar);
-
-    filtrar();
-    // --------finbuscador-------
-  }
-};
-xhr.send();
-
-// ------------ fin carrito con ajax------------
-
-let indicator = JSON.parse(localStorage.getItem("carrito"));
-console.log(indicator.length);
-document.getElementById("indicador").innerHTML = indicator.length;
